@@ -34,5 +34,4 @@ def recursive_sum(number_one, number_two):
 
 number_one = int(input('Введите первое число: '))
 number_two = int(input('Введите второе число: '))
-
 print(f'{number_one} + {number_two} = {recursive_sum(number_one, number_two)}')
