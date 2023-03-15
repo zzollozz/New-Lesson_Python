@@ -71,9 +71,10 @@ def print_operation_table(operation, num_rows=6, num_columns=6):
     for i in range(1, num_rows + 1):
         list.append([])
         for j in range(1, num_columns + 1):
-            list[i-1].append(element_row_and_column_number(operation(i, j)))
+            list[i-1].append(operation(i, j))
+            # list[i-1].append(element_row_and_column_number(operation(i, j)))
     return '\n'.join(map(str, list))
 
     # проверка
-print(print_operation_table(lambda x, y: x * y))
-# print(print_operation_table(lambda x, y: x * y, 10, 9))
+# print(print_operation_table(lambda x, y: x * y))
+print(print_operation_table(lambda x, y: x * y, 10, 9))

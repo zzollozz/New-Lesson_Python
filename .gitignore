@@ -1,0 +1,4 @@
+.gitignore
+.DS_Store
+/dopy/Test.json
+/dopy/test.py
