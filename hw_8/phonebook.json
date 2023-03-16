@@ -3,35 +3,7 @@
         "firstName": "Test",
         "surname": "Testov",
         "phone_number": [
-            "79991112233"
-        ]
-    },
-    "1": {
-        "firstName": "Bob",
-        "surname": "Boby",
-        "phone_number": [
-            "70001112999"
-        ]
-    },
-    "2": {
-        "firstName": "Tom",
-        "surname": "Tomy",
-        "phone_number": [
-            "75551119999"
-        ]
-    },
-    "6": {
-        "firstName": "Smit",
-        "surname": "Shhhhh",
-        "phone_number": [
-            "77772341178"
-        ]
-    },
-    "7": {
-        "firstName": "Smit",
-        "surname": "Shhhhh",
-        "phone_number": [
-            "77772341178"
+            79991112233
         ]
     }
 }
