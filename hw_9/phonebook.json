@@ -1,0 +1,45 @@
+{
+    "0": {
+        "firstName": "Test",
+        "surname": "Testov",
+        "phone_number": [
+            79991112233
+        ]
+    },
+    "1": {
+        "firstName": "Tom",
+        "surname": "Soer",
+        "phone_number": [
+            79991112233
+        ]
+    },
+    "2": {
+        "firstName": "Bob",
+        "surname": "Baiden",
+        "phone_number": [
+            79991112233
+        ]
+    },
+    "3": {
+        "firstName": "Kot",
+        "surname": "Kompot",
+        "phone_number": [
+            1111111
+        ]
+    },
+    "4": {
+        "firstName": "Kot",
+        "surname": "Kompot",
+        "phone_number": [
+            111111,
+            22222
+        ]
+    },
+    "5": {
+        "firstName": "Xxxxx",
+        "surname": "Zzzzz",
+        "phone_number": [
+            444445556666
+        ]
+    }
+}
