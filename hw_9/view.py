@@ -31,7 +31,7 @@ def print_result_fanc(message):
 def print_phonebook(obj: dict):
     for key, val in obj.items():
         print(
-            f'id: {key}, Имя: {val.get("firstName"):<10} Фамилия: {val.get("surname"):<10} Ном.телефона: {val.get("phone_number")}')
+            f'| id: {key}, | Имя: {val.get("firstName"):<15} | Фамилия: {val.get("surname"):<15} | Ном.телефона: {val.get("phone_number")}')
 
 
 def input_update_data():
@@ -43,4 +43,3 @@ def input_update_data():
     phone_number = input('Введите номер или номера телефона: ')
     phone_number = phone_number if phone_number != '' else None
     return firstName, surname, phone_number
-

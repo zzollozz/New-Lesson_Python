@@ -11,13 +11,12 @@ class PhoneBook:
 
     def __init__(self, name_file):
         self.name_file = name_file
-        self.phonebook = {}
+        self.phonebook = self.open_file(self.name_file)
 
     def open_file(self, name_file):
         try:
-            with open(f'{self.path}/{name_file}') as file:
-                self.phonebook = json.load(file)
-                return f'Файл загружен!'
+            with open(f'{self.path}/{name_file}.json') as file:
+                return json.load(file)
         except Exception as ex:
             return f'Данный файл или каталог отсутствует'
 
@@ -61,10 +60,11 @@ class PhoneBook:
 
         phone_number = self.processing_phone_number(phone_number)
 
-        self.phonebook[id_key] = {'firstName': firstName if firstName != None else '',
-                                  'surname': surname if surname != None else '',
+        self.phonebook[id_key] = {'firstName': (firstName if firstName != None else '').capitalize(),
+                                  'surname': (surname if surname != None else '').capitalize(),
                                   'phone_number': phone_number
                                   }
+        self.save_file(self.name_file)
         return f'контакт id {id_key}: {firstName}  добавлен'
 
     def update_contact(self, id_contact, *args):
@@ -79,16 +79,14 @@ class PhoneBook:
         contact = self.phonebook.get(id_contact)
         phone_number = self.processing_phone_number(list(*args)[2])
 
-        firstName = list(*args)[0] if list(*args)[0] != None else contact.get('firstName')
-        surname = list(*args)[1] if list(*args)[1] != None else contact.get('surname')
-        phone_number = phone_number if phone_number else contact.get('phone_number')
-
-        update_contact = {'firstName': firstName,
-                          'surname': surname,
-                          'phone_number': phone_number
+        update_contact = {'firstName': (list(*args)[0] if list(*args)[0] != None else contact.get('firstName')).capitalize(),
+                          'surname': (list(*args)[1] if list(*args)[1] != None else contact.get('surname')).capitalize(),
+                          'phone_number': phone_number if phone_number != [''] else contact.get('phone_number')
                           }
         self.phonebook[id_contact] = update_contact
-        return f'Контакт id: {id_contact} {firstName} {surname} обновлен '
+        self.save_file(self.name_file)
+
+        return f'Контакт id: | {id_contact:<5} | {self.phonebook[id_contact].get("firstName"):} | {self.phonebook[id_contact].get("surname")} | {self.phonebook[id_contact].get("phone_number")} | обновлен '
 
     def read_contacts(self, patern=None):
         """
@@ -118,5 +116,5 @@ class PhoneBook:
         else:
             mes = f'контакт id {id_contact}: {self.phonebook.get(id_contact).get("firstName")} удален'
             del self.phonebook[id_contact]
+            self.save_file(self.name_file)
             return mes
-

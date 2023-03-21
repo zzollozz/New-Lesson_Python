@@ -1,11 +1,4 @@
 {
-    "0": {
-        "firstName": "Test",
-        "surname": "Testov",
-        "phone_number": [
-            79991112233
-        ]
-    },
     "1": {
         "firstName": "Tom",
         "surname": "Soer",
@@ -21,25 +14,38 @@
         ]
     },
     "3": {
-        "firstName": "Kot",
-        "surname": "Kompot",
+        "firstName": "Sad",
+        "surname": "Werty",
         "phone_number": [
-            1111111
+            1210000999
         ]
     },
     "4": {
-        "firstName": "Kot",
-        "surname": "Kompot",
+        "firstName": "Kompot",
+        "surname": "Kot",
         "phone_number": [
-            111111,
-            22222
+            696969696
         ]
     },
     "5": {
-        "firstName": "Xxxxx",
-        "surname": "Zzzzz",
+        "firstName": "Frank",
+        "surname": "Sesoev",
         "phone_number": [
-            444445556666
+            50505505
+        ]
+    },
+    "6": {
+        "firstName": "Dub",
+        "surname": "Osinovi",
+        "phone_number": [
+            4848484
+        ]
+    },
+    "7": {
+        "firstName": "Mor",
+        "surname": "Workov",
+        "phone_number": [
+            111122
         ]
     }
 }
